@@ -16,25 +16,16 @@ describe('getConcessionByID()', () => {
     });
 });
 
-// describe('Concessions', () => {
-//     test("", () => {
+describe('calculateTotalFromIDs()', () => {
+    test('should return the total (priceInCents)', () => {
+        const actual = calculateTotalFromIDs(concessions, ["rNVCeVsri","NEHAsbTYk"]);
+        const expected = 1318;
+        expect(actual).toBe(expected);
+    });
+    test('should return 0 if the array is empty', () => {
+        const actual = calculateTotalFromIDs(concessions, []);
+        const expected = 0;
+        expect(actual).toBe(expected);
+    });
 
-//     });
-// });
-
-// describe('Concessions', () => {
-//     test("", () => {
-
-//     });
-// });
-
-// describe('Concessions', () => {
-//     test("", () => {
-
-//     });
-// });
-// describe('Concessions', () => {
-//     test("", () => {
-
-//     });
-// });
+});

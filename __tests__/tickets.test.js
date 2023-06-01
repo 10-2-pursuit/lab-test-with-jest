@@ -14,16 +14,3 @@ describe('getTicketbyName()', () => {
         expect(actual).toBe(expected);
     });
 });
-describe('calculateTotalFromIDs()', () => {
-    test('should return the total (priceInCents)', () => {
-        const actual = calculateTotalFromIDs(concessions, ["6ha0u__54","dlb8ka9N_" ]);
-        const expected = 1788;
-        expect(actual).toBe(expected);
-    });
-    test('should return 0 if the array is empty', () => {
-        const actual = calculateTotalFromIDs(concessions, []);
-        const expected = 0;
-        expect(actual).toBe(expected);
-    });
-
-});
