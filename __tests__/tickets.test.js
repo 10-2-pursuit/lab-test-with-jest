@@ -1,9 +1,8 @@
-const {
-    getTicketByName,
-    calculateTotalFromTicketNames,
-  } = require("./src/tickets");
+const {getTicketByName,calculateTotalFromTicketNames} = require("../src/tickets");
+const tickets = require("../data/tickets");
 
-describe('Tickets', () => {
+
+describe('getTicketByName()', () => {
     test("", () => {
 
     });

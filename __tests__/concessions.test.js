@@ -1,12 +1,18 @@
- const {
-    getConcessionByID,
-    calculateTotalFromIDs
-} = require ("./src/concessions");
+ const {getConcessionByID,calculateTotalFromIDs} = require ("../src/concessions");
 
-const concession = 
-describe('Concessions', () => {
-    test("", () => {
+const concessions = require("../data/concessions");
 
+
+describe('getConcessionByID()', () => {
+    test('should return a concession object with a matching id', () => {
+        const actual = getConcessionByID(concessions, concessions[0].id);
+        const expected = concessions[0];
+        expect(actual).toBe(expected);
+    });
+    test('should return null if id does not match', () => {
+        const actual = getConcessionByID(concessions, "1");
+        const expected = null;
+        expect(actual).toBe(expected);
     });
 });
 
