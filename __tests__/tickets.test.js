@@ -28,11 +28,16 @@ describe("calculateTotalFromTicketNames", () => {
         const actual = calculateTotalFromTicketNames(ticketsData, ["Adult Matinee", "Child"]);
         const expected = 949;
         expect(actual).toStrictEqual(expected);
-      });
-      test("calculate properly from correct input w/ more than 2 elements", () => {
+    });
+    test("calculate properly from correct input w/ more than 2 elements", () => {
         const actual = calculateTotalFromTicketNames(ticketsData, ["Adult Matinee", "Child Regular", "Senior Matinee"]);
         const expected = 2857;
         expect(actual).toStrictEqual(expected);
-      });
+    });
+    test("case insensitive", () => {
+        const actual = calculateTotalFromTicketNames(ticketsData, ["ADULT MATINEE", "child regular", "SeNior MaTinee"]);
+        const expected = 2857;
+        expect(actual).toStrictEqual(expected);
+    });
 });
 

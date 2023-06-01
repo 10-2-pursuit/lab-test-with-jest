@@ -21,7 +21,7 @@ describe("getConcessionByID", () => {
 describe("calculateTotalFromIDs", () => {
     test("calculate total from an array of IDs", () => {
       const actual = calculateTotalFromIDs(concessions, ["g9sZdG1hI", "0Qs9Yp2NL"]);
-      const expected = 2857;
+      const expected = 1958;
       expect(actual).toStrictEqual(expected);
     });
     test("Omitting false id from calculation", () => {
