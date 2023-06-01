@@ -14,3 +14,15 @@ describe('getTicketbyName()', () => {
         expect(actual).toBe(expected);
     });
 });
+describe('calculateTotalFromTicketNames()', () => {
+    test('should return the total priceInCents from the names array', () => {
+        const actual = calculateTotalFromTicketNames(tickets, ["Child Matinee", "Adult Matinee"]);
+        const expected = 1618;
+        expect(actual).toBe(expected);
+    });
+    test('should return 0 if the array is incorrect', () => {
+        const actual = calculateTotalFromTicketNames(tickets, []);
+        const expected = 0;
+        expect(actual).toBe(expected);
+    });
+});
