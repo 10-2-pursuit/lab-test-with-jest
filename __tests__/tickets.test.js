@@ -23,17 +23,25 @@ describe("getTicKetsByName", () => {
   
 describe("calculateTotalFromTicketNames", () => {
     test("do something", () => {
-      const actual = calculateTotalFromTicketNames(ticketsData, "Adult Matinee");
+      const actual = calculateTotalFromTicketNames(ticketsData, ["Adult Matinee"]);
       const expected = 949;
       expect(actual).toStrictEqual(expected);
     });
 });
 
-console.log("Matinee");
-console.log(calculateTotalFromTicketNames(ticketsData, "Child Regular"));
-console.log("Adult Matinee")
-console.log(calculateTotalFromTicketNames(ticketsData, "Adult Matinee"));
-console.log(calculateTotalFromTicketNames(ticketsData, "6ha0u__54"));
+describe("calculateTotalFromTicketNames", () => {
+    test("do something", () => {
+      const actual = calculateTotalFromTicketNames(ticketsData, ["Adult Matinee", "Child Regular"]);
+      const expected = 2018;
+      expect(actual).toStrictEqual(expected);
+    });
+});
 
-console.log(getTicketByName(ticketsData, "Adult Matinee"));
-console.log(getTicketByName(ticketsData, "6ha0u__54"));
+describe("calculateTotalFromTicketNames", () => {
+    test("Omitting false names from calculation", () => {
+      const actual = calculateTotalFromTicketNames(ticketsData, ["Adult Matinee", "Child"]);
+      const expected = 949;
+      expect(actual).toStrictEqual(expected);
+    });
+});
+
