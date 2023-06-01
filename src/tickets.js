@@ -1,4 +1,4 @@
-const tickets = require("./src/tickets");
+const tickets = require("../src/tickets");
 
 /**
  * Returns a ticket object when given the name.

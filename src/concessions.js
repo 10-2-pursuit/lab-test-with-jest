@@ -1,4 +1,4 @@
-const concessions = require("./src/concessions");
+const concessions = require("../src/concessions");
 
 /**
  * Returns a concession object by ID.

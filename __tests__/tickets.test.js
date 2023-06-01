@@ -2,14 +2,16 @@ const {getTicketByName,calculateTotalFromTicketNames} = require("../src/tickets"
 const tickets = require("../data/tickets");
 
 
-describe('getTicketByName()', () => {
-    test("", () => {
-
+describe('getTicketbyName()', () => {
+    test('should return a ticket object with a matching name', () => {
+        const actual = getTicketByName(tickets, tickets[0].name);
+        const expected = tickets[0];
+        expect(actual).toBe(expected);
     });
-});
-describe('Tickets', () => {
-    test("", () => {
-
+    test('should return null if name does not match', () => {
+        const actual = getTicketByName(tickets, "wrong");
+        const expected = null;
+        expect(actual).toBe(expected);
     });
 });
 describe('Tickets', () => {
