@@ -14,7 +14,7 @@ describe("getTicKetsByName", () => {
 });
 
 describe("getTicKetsByName", () => {
-    test("do something", () => {
+    test("return null for value that cannot be found in the data", () => {
         const actual = getTicketByName(ticketsData, "Adult");
         const expected = null;
         expect(actual).toStrictEqual(expected);
@@ -22,7 +22,7 @@ describe("getTicKetsByName", () => {
 });
   
 describe("calculateTotalFromTicketNames", () => {
-    test("do something", () => {
+    test("calculate properly from correct input", () => {
       const actual = calculateTotalFromTicketNames(ticketsData, ["Adult Matinee"]);
       const expected = 949;
       expect(actual).toStrictEqual(expected);
@@ -30,9 +30,9 @@ describe("calculateTotalFromTicketNames", () => {
 });
 
 describe("calculateTotalFromTicketNames", () => {
-    test("do something", () => {
-      const actual = calculateTotalFromTicketNames(ticketsData, ["Adult Matinee", "Child Regular"]);
-      const expected = 2018;
+    test("calculate properly from correct input w/ more than 2 elements", () => {
+      const actual = calculateTotalFromTicketNames(ticketsData, ["Adult Matinee", "Child Regular", "Senior Matinee"]);
+      const expected = 2857;
       expect(actual).toStrictEqual(expected);
     });
 });
