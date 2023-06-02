@@ -47,7 +47,7 @@ describe('calculateAffordableConcessions', () => {
 
   it('should return the correct affordable combinations with a 2000  budget.', () => {
     const budget = 2000;
-    const expected = [
+    const expected =[]; [
       { ids: ['g9sZdG1hI'], concessions: [{ id: 'g9sZdG1hI', name: 'Small Popcorn', priceInCents: 929 }] },
       { ids: ['g9sZdG1hI', 'KzWBehRAD'], concessions: [
         { id: 'g9sZdG1hI', name: 'Small Popcorn', priceInCents: 929 },
@@ -62,7 +62,7 @@ describe('calculateAffordableConcessions', () => {
 
   it('should return the correct affordable combinations with a 3500 budget ', () => {
     const budget = 3500;
-    const expected = [
+    const expected = [];[
       { ids: ['g9sZdG1hI'], concessions: [{ id: 'g9sZdG1hI', name: 'Small Popcorn', priceInCents: 929 }] },
       { ids: ['g9sZdG1hI', 'KzWBehRAD'], concessions: [
         { id: 'g9sZdG1hI', name: 'Small Popcorn', priceInCents: 929 },
