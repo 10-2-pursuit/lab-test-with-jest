@@ -1,3 +1,5 @@
+const concessions = require("../data/concessions")
+
 /**
  * Returns a concession object by ID.
  * @param {Object[]} concessions An array of concession objects
@@ -26,5 +28,36 @@ function calculateTotalFromIDs(concessions, ids) {
 }
 
 
+ /**
+ * Generates all combinations of affordable concessions given a budget.
+ * @param {Object[]} concessions An array of concession objects
+ * @param {Number} budget The budget for the concessions
+ * @returns {Object[]} affordableConcessions An array of affordable combinations of concessions
+ */
+function calculateAffordableConcessions(concessions, budget) {
+  const affordableConcessions = [];
+
+  function generateCombinations(currentCombination, remainingBudget, startIndex) {
+    if (remainingBudget === 0) {
+      affordableConcessions.push(currentCombination.slice());
+      return;
+    }
+
+    for (let i = startIndex; i < concessions.length; i++) {
+      const concession = concessions[i];
+
+      if (concession.priceInCents <= remainingBudget) {
+        currentCombination.push(concession.id);
+        generateCombinations(currentCombination, remainingBudget - concession.priceInCents, i);
+        currentCombination.pop();
+      }
+    }
+  }
+
+  generateCombinations([], budget, 0);
+  return affordableConcessions;
+}
+
 module.exports = {getConcessionByID,
-                  calculateTotalFromIDs}
+                  calculateTotalFromIDs,
+                  calculateAffordableConcessions}
