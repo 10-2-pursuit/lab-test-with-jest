@@ -27,5 +27,5 @@ function calculateTotalFromIDs(concessions, ids) {
 
 module.exports = {
   getConcessionByID,
-  calculateTotalFromIDs
+  calculateTotalFromIDs,
 };
