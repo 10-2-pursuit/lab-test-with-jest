@@ -15,9 +15,39 @@ describe('this will test getConcessionByID', () => {
     });
 });
 
-describe('this will test calculateTotalFromIDs', () => {
-    it('', () => {
-        
-    });
+// describe('this will test calculateTotalFromIDs', () => {
+//     it('should calculate the total of concessions from given ids', () => {
+//         const id = "g9sZdG1hI";
+//         const actual = calculateTotalFromIDs(concessions, id);
+//         const expected = 929;
+//         expect(actual).toEqual(expected);
+//     });
     
-});
+//     it('should calculate the total of concessions from given ids', () => {
+//         const id = "0Qs9Yp2NL";
+//         const actual = calculateTotalFromIDs(concessions, id);
+//         const expected = 1029;
+//         expect(actual).toEqual(expected);
+//     });
+
+//     it('should calculate the total of concessions from given ids', () => {
+//         const id = "KzWBehRAD";
+//         const actual = calculateTotalFromIDs(concessions, id);
+//         const expected = 699;
+//         expect(actual).toEqual(expected);
+//     });
+
+//     it('should calculate the total of concessions from given ids', () => {
+//         const id = "NEHAsbTYk";
+//         const actual = calculateTotalFromIDs(concessions, id);
+//         const expected = 749;
+//         expect(actual).toEqual(expected);
+//     });
+
+//     it('should calculate the total of concessions from given ids', () => {
+//         const id = "rNVCeVsri";
+//         const actual = calculateTotalFromIDs(concessions, id);
+//         const expected = 569;
+//         expect(actual).toEqual(expected);
+//     });
+// });
