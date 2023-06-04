@@ -1,4 +1,4 @@
- const {getConcessionByID,calculateTotalFromIDs} = require ("../src/concessions");
+const {getConcessionByID,calculateTotalFromIDs} = require ("../src/concessions");
 
 const concessions = require("../data/concessions");
 
