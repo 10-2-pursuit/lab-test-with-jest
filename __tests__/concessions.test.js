@@ -9,4 +9,15 @@ describe('this will test getConcessionByID', () => {
         const actual = getConcessionByID(concessions, id);
         expect(actual.id).toEqual(id);
     });
+
+    it('should return `null` if no object is found', () => {
+        expect(getConcessionByID(concessions, "incorrect-id")).toEqual(null);
+    });
+});
+
+describe('this will test calculateTotalFromIDs', () => {
+    it('', () => {
+        
+    });
+    
 });
