@@ -1,7 +1,7 @@
 const {
 getTicketByName,
 calculateTotalFromTicketNames
-} = require("../src/tickets.js")
+} = require("../src/tickets.js") 
 
 const data = require ("../data/tickets.js")
 
